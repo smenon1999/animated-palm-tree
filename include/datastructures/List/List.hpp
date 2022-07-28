@@ -16,9 +16,7 @@ namespace DataStructures {
              * @brief Construct a new List< T> object
              * 
              */
-            List<T>() {
-                this->clear();
-            }
+            List<T>() {}
 
             /**
              * @brief Construct a new List< T> object
@@ -110,13 +108,6 @@ namespace DataStructures {
                 return this->m_size;
             }
 
-            /**
-             * @brief Overridden methods from Base
-             * 
-             */
-            void clear() override {
-                this->m_size = 0;
-            }
     };
 }
 

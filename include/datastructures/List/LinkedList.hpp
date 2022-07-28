@@ -45,6 +45,12 @@ namespace DataStructures {
              */
             LinkedList<T>(const List<T> &copy) : List<T>(copy) {}
 
+            /**
+             * @brief Destroy the Linked List< T> object
+             * 
+             */
+            virtual ~LinkedList<T>() {this->clear();}
+
             
             /**
              * @brief advances curr

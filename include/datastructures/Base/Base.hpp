@@ -17,9 +17,13 @@ namespace DataStructures {
              * @brief clears the data structure
              * 
              */
-            virtual void clear() {}
+            virtual void clear() = 0;
 
-            virtual ~Base() { this->clear();}
+            /**
+             * @brief Destroy the Base object
+             * 
+             */
+            virtual ~Base() {}
     };
 }
 
