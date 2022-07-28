@@ -36,23 +36,16 @@ namespace DataStructures {
              * @brief Construct a new Linked List< T> object
              * 
              */
-            LinkedList<T>() : List<T>() {
-                this->head = nullptr;
-                this->curr = head;
-                this->pos = 0;
-            }
+            LinkedList<T>() : List<T>() { this->clear();}
 
             /**
              * @brief Construct a new Linked List< T> object from copy list
              * 
              * @param copy 
              */
-            LinkedList<T>(const List<T> &copy) : List<T>(copy) {
-                this->head = nullptr;
-                this->curr = head;
-                this->pos = 0;
-            }
+            LinkedList<T>(const List<T> &copy) : List<T>(copy) {}
 
+            
             /**
              * @brief advances curr
              * 
@@ -201,6 +194,13 @@ namespace DataStructures {
              * @brief overriden methods from Base
              * 
              */
+            void clear() override {
+                this->head = nullptr;
+                this->curr = head;
+                this->pos = 0;
+                this->m_size = 0;
+            }
+
             std::string to_string() override {
                 std::string out = "<";
                 this->reset_curr();

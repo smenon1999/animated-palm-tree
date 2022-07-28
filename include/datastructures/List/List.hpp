@@ -16,7 +16,9 @@ namespace DataStructures {
              * @brief Construct a new List< T> object
              * 
              */
-            List<T>() : m_size(0) {}
+            List<T>() {
+                this->clear();
+            }
 
             /**
              * @brief Construct a new List< T> object
@@ -26,6 +28,7 @@ namespace DataStructures {
             List<T>(const List<T> &copy) {
                this->append(copy);
             }
+
 
             /**
              * @brief size of the list
@@ -105,6 +108,14 @@ namespace DataStructures {
              */
             int size() {
                 return this->m_size;
+            }
+
+            /**
+             * @brief Overridden methods from Base
+             * 
+             */
+            void clear() override {
+                this->m_size = 0;
             }
     };
 }

@@ -12,6 +12,14 @@ namespace DataStructures {
              * @return string format of object
              */
             virtual std::string to_string() = 0;
+
+            /**
+             * @brief clears the data structure
+             * 
+             */
+            virtual void clear() {}
+
+            virtual ~Base() { this->clear();}
     };
 }
 
