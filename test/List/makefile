@@ -1,0 +1,2 @@
+linked_list_test : linked_list_test.cpp ../../include/datastructures/List/List.hpp ../../include/datastructures/List/LinkedList.hpp ../../include/datastructures/Base/Base.hpp
+	g++ -Wall -g -pthread linked_list_test.cpp -lgtest_main  -lgtest -lpthread -o linked_list_test
